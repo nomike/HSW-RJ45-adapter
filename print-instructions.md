@@ -1,1 +1,1 @@
-Nothing special.
+Can be printed without supports.
