@@ -5,7 +5,13 @@ include <eth_plug_cover.scad>
 $fa = 8;
 $fs = 0.25;
 epsilon = 0.001;
-angle = 120;
+x_angle = 0;
+y_angle = 270;
+z_angle = 0;
+
+
+
+
 
 /* [Options] */
 tolerance = 0;
@@ -29,5 +35,6 @@ structure = [[2]];
 
 union() {
     insert_plug_adv(structure);
-    translate([0, 0, epsilon-eth_plug_cover_stl_ysize/2]) rotate([270, 0, angle]) eth_plug_cover_stl_obj2origin(CTR);
+    translate([0, 0, epsilon-eth_plug_cover_stl_xsize/2]) 
+    rotate([0, 270, z_angle]) eth_plug_cover_stl_obj2origin(CTR);
 }
