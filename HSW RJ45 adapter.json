@@ -1,0 +1,11 @@
+{
+    "fileFormatVersion": "1",
+    "parameterSets": {
+        "straight": {
+            "sideways": "false"
+        },
+        "sideways": {
+            "sideways": "true"
+        }
+    }
+}

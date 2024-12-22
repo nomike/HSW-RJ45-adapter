@@ -1,21 +1,22 @@
 include <hws_openscad_attachments_and_connectors/hws_insert_util.scad>
 include <eth_plug_cover.scad>
 
-/* [Setup Parameters] */
+sideways=false;
+
+/* [Hidden] */
 $fa = 8;
 $fs = 0.25;
 epsilon = 0.001;
-x_angle = 0;
-y_angle = 270;
-z_angle = 0;
-
-
-
-
-
-/* [Options] */
 tolerance = 0;
 decoration = false;
+
+
+x_angle = (sideways) ? 0 : 270;
+y_angle = (sideways) ? 270 : 0;
+z_angle = (sideways) ? 0 : 90;
+translate_z = ((sideways) ? (-epsilon-eth_plug_cover_stl_xsize/2) : (epsilon-eth_plug_cover_stl_ysize/2))+1.2;
+
+/* [Options] */
 
 module insert_plug_adv(structure)
 {
@@ -35,6 +36,6 @@ structure = [[2]];
 
 rotate([180, 0, 0]) union() {
     insert_plug_adv(structure);
-    translate([0, 0, epsilon-eth_plug_cover_stl_xsize/2]) 
-    rotate([0, 270, z_angle]) eth_plug_cover_stl_obj2origin(CTR);
+    translate([0, 0, translate_z]) 
+    rotate([x_angle, y_angle, z_angle]) eth_plug_cover_stl_obj2origin(CTR);
 }
