@@ -33,7 +33,7 @@ module insert_plug_adv(structure)
 
 structure = [[2]];
 
-union() {
+rotate([180, 0, 0]) union() {
     insert_plug_adv(structure);
     translate([0, 0, epsilon-eth_plug_cover_stl_xsize/2]) 
     rotate([0, 270, z_angle]) eth_plug_cover_stl_obj2origin(CTR);
