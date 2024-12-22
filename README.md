@@ -12,7 +12,7 @@ Follow those links for the individual licenses.
 
 #### Thingiverse
 
-<https://thingiverse.com/thing:>
+<https://thingiverse.com/thing:6883640>
 
 #### GitHub
 
