@@ -10,6 +10,13 @@ A simple RJ45 adaptor for the honeycomb storage wall. Allows you to attach the e
 
 Follow those links for the individual licenses.
 
+#### Customizing
+
+This design was done in OpenSCAD and can be customized.
+
+Clone the repository with `git clone --recursive` using the Github URL mentioned below.
+Be sure to use a [recent version of OpenSCAD](https://openscad.org/downloads.html#snapshots).
+
 #### Thingiverse
 
 <https://thingiverse.com/thing:6883640>
